@@ -1,0 +1,8 @@
+{
+  "name": "deleted-root",
+  "private": true,
+  "scripts": {
+    "preinstall": "cd deLeted && npm install",
+    "build": "cd deLeted && npm run build && node -e \"const fs = require('fs'); fs.rmSync('../dist', {recursive: true, force: true}); fs.cpSync('dist', '../dist', {recursive: true})\""
+  }
+}
