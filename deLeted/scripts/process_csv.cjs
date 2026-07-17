@@ -6,8 +6,8 @@ const CSV_PATH = path.join(__dirname, '../../xvideos.com-export-full.csv');
 const OUTPUT_DIR = path.join(__dirname, '../public/data');
 const VIDEOS_OUT = path.join(OUTPUT_DIR, 'videos.json');
 
-// We will extract 50,000 videos to keep the JSON size reasonable
-const MAX_VIDEOS = 50000;
+// We will extract 20,000 videos to keep the JSON size reasonable (well below 25MB limits)
+const MAX_VIDEOS = 20000;
 
 async function processCSV() {
   if (!fs.existsSync(OUTPUT_DIR)) {
